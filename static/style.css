@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(135deg,
+        #f4f7ff,
+        #eef5ff);
+
+    color: #172033;
+
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 7%;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e9f2;
+}
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    color: #2446a8;
+}
+
+.tagline {
+
+    color: #68738a;
+
+    font-size: 14px;
+}
+
+
+/* MAIN */
+
+main {
+
+    width: 86%;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 50px 0;
+}
+
+
+/* HERO */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+
+    color: #4169e1;
+}
+
+.hero p {
+
+    color: #68738a;
+
+    font-size: 18px;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.6;
+}
+
+
+/* WORKSPACE */
+
+.workspace {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(30,50,100,0.08);
+
+    border: 1px solid #e6eaf2;
+}
+
+.card-title h2,
+.result-header h2 {
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.card p {
+
+    color: #7a8498;
+
+    font-size: 14px;
+}
+
+
+textarea {
+
+    width: 100%;
+
+    height: 340px;
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    border: 1px solid #dce2ef;
+
+    border-radius: 12px;
+
+    resize: none;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    outline: none;
+}
+
+textarea:focus {
+
+    border-color: #4169e1;
+
+    box-shadow:
+        0 0 0 3px rgba(65,105,225,0.1);
+}
+
+
+.bottom-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+}
+
+#charCount {
+
+    color: #8a94a8;
+
+    font-size: 13px;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 13px 22px;
+
+    background: #4169e1;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    background: #3154c7;
+}
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* RESULT */
+
+.result-card {
+
+    min-height: 450px;
+}
+
+.result-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.status {
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #e9f8ef;
+
+    color: #208346;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.result {
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: #f8faff;
+
+    min-height: 340px;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+
+    overflow-y: auto;
+}
+
+.empty-state {
+
+    text-align: center;
+
+    padding-top: 80px;
+
+    color: #7b8498;
+}
+
+.big-icon {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.empty-state h3 {
+
+    color: #34405a;
+
+    margin-bottom: 8px;
+}
+
+
+/* FEATURES */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+.feature {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    border: 1px solid #e6eaf2;
+}
+
+.feature div {
+
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+
+    margin-bottom: 8px;
+}
+
+.feature p {
+
+    color: #7a8498;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    color: #8a94a8;
+
+    font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    .workspace {
+
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .hero h1 {
+
+        font-size: 35px;
+    }
+
+}
